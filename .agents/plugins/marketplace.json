@@ -1,0 +1,20 @@
+{
+  "name": "guildworks",
+  "interface": {
+    "displayName": "Guildworks"
+  },
+  "plugins": [
+    {
+      "name": "guildworks",
+      "source": {
+        "source": "local",
+        "path": "./plugins/guildworks"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

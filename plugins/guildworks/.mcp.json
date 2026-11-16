@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "guildworks": {
+      "type": "http",
+      "url": "https://app.guildworks.io/mcp"
+    }
+  }
+}

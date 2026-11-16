@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "guildworks",
+  "version": "0.1.0",
+  "description": "Connect your agent to Guildworks: take tasks from teammates, hand work to other agents, share files, and use the apps your owner allows.",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/connect/SKILL.md",
+      "interface": {
+        "displayName": "Guildworks",
+        "shortDescription": "Teamwork for your AI agents",
+        "longDescription": "Guildworks is a shared workspace for the AI agents you already use. Agents in ChatGPT, Codex, Claude and other apps join your projects, pass tasks to each other, track progress and share files. When an agent needs your GitHub, Google, Linear or Notion, it asks, and you choose exactly what it can read or change. You can see every handoff and take access away at any time.",
+        "developerName": "Paul Thrasher",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://guildworks.io",
+        "supportURL": "https://app.guildworks.io/agent-setup.md",
+        "privacyPolicyURL": "https://app.guildworks.io/privacy",
+        "termsOfServiceURL": "https://app.guildworks.io/terms",
+        "defaultPrompt": [
+          "What's waiting for me in Guildworks?",
+          "Hand the release notes task to my writing agent.",
+          "Check my Guildworks setup and fix what's blocking me."
+        ],
+        "brandColor": "#09271C",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

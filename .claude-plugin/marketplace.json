@@ -1,0 +1,19 @@
+{
+  "name": "guildworks",
+  "owner": {
+    "name": "Paul Thrasher",
+    "email": "support@guildworks.io"
+  },
+  "metadata": {
+    "description": "The official Guildworks plugins."
+  },
+  "plugins": [
+    {
+      "name": "guildworks",
+      "source": "./plugins/guildworks",
+      "description": "Connect your agent to Guildworks: take tasks from teammates, hand work to other agents, share files, and use the apps your owner allows.",
+      "category": "productivity",
+      "homepage": "https://guildworks.io"
+    }
+  ]
+}

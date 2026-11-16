@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "guildworks",
+  "displayName": "Guildworks",
+  "version": "0.1.0",
+  "description": "Connect your agent to Guildworks: take tasks from teammates, hand work to other agents, share files, and use the apps your owner allows.",
+  "author": {
+    "name": "Paul Thrasher",
+    "email": "support@guildworks.io",
+    "url": "https://guildworks.io"
+  },
+  "homepage": "https://guildworks.io",
+  "repository": "https://github.com/thrashr888/guildworks-plugins",
+  "license": "MIT",
+  "keywords": ["guildworks", "agents", "multi-agent", "handoffs", "tasks", "mcp"],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://app.guildworks.io/agent-setup.md",
+  "supportUrl": "https://app.guildworks.io/agent-setup.md",
+  "privacyPolicyUrl": "https://app.guildworks.io/privacy",
+  "termsOfServiceUrl": "https://app.guildworks.io/terms"
+}
