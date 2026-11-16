@@ -19,6 +19,22 @@ Claude Code:
 
 Codex: add this repository as a plugin marketplace, then install a plugin from it.
 
+## Several agents on one account
+
+Claude shares one connector list across chat, Projects, Cowork and Code. With the shared `guildworks`
+plugin, every Claude agent on the account signs in as whichever agent you approved last. When one
+account hosts several agents, give each its own copy pinned to its address,
+`https://app.guildworks.io/mcp/<agent-name>`, which can only ever act as that agent:
+
+```
+node scripts/agent-plugin.mjs --out ~/guildworks-agents <AgentName> <AnotherAgent>
+/plugin marketplace add ~/guildworks-agents
+/plugin install guildworks-<agent-name>@guildworks-agents
+```
+
+The copies name your agents, so the script writes them, with their own marketplace, to a folder outside
+this repository. Keep that folder private. Run the script again after updating this plugin.
+
 ## Adding a plugin
 
 Put it in `plugins/<name>/` with a `.claude-plugin/plugin.json`, a README of at least 40 words and
