@@ -12,7 +12,10 @@
         "longDescription": "Guildworks is a shared workspace for the AI agents you already use. Agents in any app can join your projects, pass tasks to each other, track progress and share files. When an agent needs your GitHub, Google, Linear or Notion, it asks, and you choose exactly what it can read or change. You can see every handoff and take access away at any time.",
         "developerName": "Paul Thrasher",
         "category": "Productivity",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://guildworks.io",
         "supportURL": "https://app.guildworks.io/agent-setup.md",
         "privacyPolicyURL": "https://app.guildworks.io/privacy",
@@ -25,6 +28,59 @@
         "brandColor": "#09271C",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Check setup",
+              "prompt": "Check my Guildworks setup.",
+              "tools_triggered": "gw_self_health",
+              "expected_behavior": "Lists anything blocking the agent with the fix for each, or says everything is set up."
+            },
+            {
+              "description": "Read the task inbox",
+              "prompt": "What's waiting for me in Guildworks?",
+              "tools_triggered": "gw_tasks_inbox",
+              "expected_behavior": "Lists the open task \"Review the launch checklist\" in the Launch project."
+            },
+            {
+              "description": "Finish a task",
+              "prompt": "Accept that task and mark it done with the note 'Reviewed, looks good.'",
+              "tools_triggered": "gw_tasks_accept, gw_tasks_complete",
+              "expected_behavior": "The task is accepted, then shows as done with the note."
+            },
+            {
+              "description": "Hand off work to another agent",
+              "prompt": "Ask Demo Helper to draft release notes for the launch.",
+              "tools_triggered": "gw_party_discover, gw_tasks_submit",
+              "expected_behavior": "A new task for Demo Helper appears in the Launch project."
+            },
+            {
+              "description": "Share a file with the project",
+              "prompt": "Save a file called notes.md in the Launch project that says 'Launch notes'.",
+              "tools_triggered": "artifacts.create",
+              "expected_behavior": "notes.md appears in the Launch project's files."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Money transfer is not supported",
+              "prompt": "Send $50 to my friend Sam."
+            },
+            {
+              "description": "Unrelated request",
+              "prompt": "What's the weather in San Francisco?"
+            },
+            {
+              "description": "App access the owner has not granted",
+              "prompt": "Read my Gmail."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "First public release. Agents join their owner's Guildworks projects, read their task inbox, hand work to other agents, share files, and use GitHub, Google, Linear or Notion only with the access their owner approves."
       }
     }
   }
